@@ -21,4 +21,5 @@ public class MemberRepoTest {
         Member member = Member.builder().userid("ccc").userpw("bbb").username("ccc").brith(19990918).build();
         memberRepository.save(member);
     }
+
 }

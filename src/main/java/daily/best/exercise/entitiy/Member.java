@@ -1,28 +1,27 @@
 package daily.best.exercise.entitiy;
-
 import jakarta.persistence.*;
 import lombok.*;
-
 import java.time.LocalDateTime;
 import java.time.ZoneId;
-import java.util.Date;
 
 @Entity
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
-@Setter
 @ToString
 public class Member {
     @Id
     private String userid;
+
     private String userpw;
+
     private String username;
-    @Temporal(TemporalType.TIMESTAMP)
+
     private LocalDateTime regdate;
-    @Temporal(TemporalType.TIMESTAMP)
+
     private LocalDateTime updatedate;
+
     private int brith;
 
     @PrePersist
