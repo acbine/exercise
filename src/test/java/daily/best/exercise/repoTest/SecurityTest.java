@@ -16,6 +16,6 @@ public class SecurityTest {
         String pw="1234";
         String enpw= passwordEncoder.encode(pw);
         System.out.println(enpw+"+++++++++++++++++++++++++++++++++++++++++++++++");
-
+        boolean matchResult = passwordEncoder.matches(pw,enpw);//pw 랑 enpw 비교 해서 같은면 true
     }
 }
