@@ -1,20 +1,20 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    background-color: #d9edf7; /* 하늘색 계열 */
 }
 
 .login-container {
     width: 300px;
-    margin: 0 auto;
+    margin: 0 auto; /* 수평 가운데 정렬 */
     padding: 20px;
-    background-color: #fff;
+    background-color: #ffffff; /* 흰색 */
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
     text-align: center;
-    color: #333;
+    color: #333333; /* 어두운 회색 */
 }
 
 form {
@@ -25,17 +25,17 @@ input[type="text"], input[type="password"], input[type="submit"] {
     width: 100%;
     margin-bottom: 10px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc; /* 연한 회색 */
     border-radius: 3px;
     box-sizing: border-box;
 }
 
 input[type="submit"] {
-    background-color: #4CAF50;
+    background-color: #5bc0de; /* 하늘색 계열 */
     color: white;
     cursor: pointer;
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #31b0d5; /* 더 진한 하늘색 계열 */
 }
