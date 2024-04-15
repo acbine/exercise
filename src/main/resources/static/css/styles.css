@@ -1,10 +1,41 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #d9edf7; /* 하늘색 계열 */
+
+    height: 100%;
+
 }
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 
 .login-container {
     width: 300px;
+    margin: 0 auto; /* 수평 가운데 정렬 */
+    padding: 20px;
+    background-color: #ffffff; /*흰색 */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.signup-container {
+    width: 300px;
+    margin: 0 auto; /* 수평 가운데 정렬 */
+    padding: 20px;
+    background-color: #ffffff; /* 흰색 */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-container {
+    width: 80%;
+    height: 720px; /* 세로 길이를 95%로 변경 */
     margin: 0 auto; /* 수평 가운데 정렬 */
     padding: 20px;
     background-color: #ffffff; /* 흰색 */
@@ -38,4 +69,16 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #31b0d5; /* 더 진한 하늘색 계열 */
+}
+
+.login-button {
+    text-align: center;
+    text-decoration: none; /* 밑줄 제거 */
+    background-color: #5bc0de; /* 하늘색 계열 */
+    color: white;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #cccccc; /* 연한 회색 */
+    border-radius: 3px;
+    box-sizing: border-box;
 }

@@ -29,7 +29,7 @@ public class MemberDetailService implements UserDetailsService { //MemberDetailS
         Member member= memberOptional.get();
 
         MemberDTO memberDTO = new MemberDTO(member.getUserid(),member.getUserpw(),member.getUsername(),member.getRegdate(),member.getUpdatedate(), member.getBrith(),
-                member.getMemberAuth().stream().map( x->new SimpleGrantedAuthority("ROLE_"+x.name()) ).collect(Collectors.toSet())); // 엔티티를 정보를  DTO 정보로
+                member.getMemberAuth().stream().map( x->new SimpleGrantedAuthority("ROLE_"+x.name()) ).collect(Collectors.toSet())); // 엔티티를 정보를  DTO정보로>
 
         return memberDTO;
     }

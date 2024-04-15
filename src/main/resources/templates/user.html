@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en"
+    xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta charset="UTF-8">
+    <title>$Title$</title>
+</head>
+<body>
+USER
+
+<div sec:authorize="hasRole('USER')">
+    안녕하세요<br>
+</div>
+
+<div sec:authentication="name"></div>
+
+<!--<div sec:authentication="princial.authorities"></div>-->
+
+
+</body>
+</html>

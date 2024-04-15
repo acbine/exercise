@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Project</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<div class="main-container">
+    메인페이지 입니다
+    <span sec:if="${#authorization.expression('isAuthenticated()')}">
+        <p>안녕하세요, <span sec:text="${#authentication.name}"></span>님!</p>
+        <form sec:action="@{/logout}" method="post">
+            <input type="submit" value="로그아웃">
+        </form>
+    </span>
+
+</div>
+
+
+</body>
+</html>
