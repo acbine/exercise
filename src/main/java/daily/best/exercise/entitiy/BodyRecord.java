@@ -1,8 +1,6 @@
 package daily.best.exercise.entitiy;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDateTime;
@@ -16,6 +14,7 @@ import java.time.LocalDateTime;
 public class BodyRecord {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long recordno;
 
     @ManyToOne

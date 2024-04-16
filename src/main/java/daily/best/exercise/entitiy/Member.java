@@ -13,6 +13,7 @@ import java.util.Set;
 @Getter
 @ToString
 public class Member {
+
     @Id
     private String userid;
 

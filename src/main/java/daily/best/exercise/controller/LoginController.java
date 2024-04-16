@@ -42,14 +42,14 @@ public class LoginController {
     }
 
     @PostMapping("/custom/signup")
-    public String signup(String userid , String username , String password , int birth , RedirectAttributes redirectAttributes){
+    public String signup(String userid , String username , String password , int birth ){
         System.out.println("회원가입신호옴");
 //        System.out.println(userid+"Aaaa"+username+"Aaaa"+password+"Aaaa"+birth);
         boolean signupSuccess = memberService.membersignup(userid, username, password, birth); // 아이디있으면false 없으면true
         if(signupSuccess) {
-            return "redirect:/custom/customLogin";
+            return "redirect:/custom/customLogin?signupSuccess=true";
         } else {
-            return "redirect:/custom/memberRegister";
+            return "redirect:/custom/memberRegister?signupSuccess=false";
         }
     }
 }

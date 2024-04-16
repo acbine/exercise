@@ -1,8 +1,6 @@
 package daily.best.exercise.entitiy;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
@@ -14,6 +12,7 @@ import lombok.*;
 public class Body {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long BNO;
 
     @OneToOne

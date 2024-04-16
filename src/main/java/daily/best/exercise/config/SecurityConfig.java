@@ -30,21 +30,20 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.authorizeHttpRequests((authorizeHttpRequests)->{
             authorizeHttpRequests.requestMatchers("/main").hasRole("USER");
+            authorizeHttpRequests.requestMatchers("/send/**").permitAll(); //crud 쿼리용
             authorizeHttpRequests.requestMatchers("/custom/**").permitAll();
-//            authorizeHttpRequests.requestMatchers("/custom/customLogin").permitAll();
             authorizeHttpRequests.requestMatchers("/css/**").permitAll();
             authorizeHttpRequests.requestMatchers("/js/**").permitAll();
             authorizeHttpRequests.requestMatchers("/images/**").permitAll();
-            authorizeHttpRequests.requestMatchers("/user").hasRole("USER");
-            authorizeHttpRequests.requestMatchers("/hi").permitAll();
-//            authorizeHttpRequests.requestMatchers("/custom/title").permitAll();
+            authorizeHttpRequests.requestMatchers("/user").hasRole("USER"); //삭제예쩡
+            authorizeHttpRequests.requestMatchers("/hi").permitAll();      //삭제예쩡
+
         });
 //        httpSecurity.formLogin(Customizer.withDefaults()); // 기본 로그인페이지
 //        httpSecurity.logout(Customizer.withDefaults());//기본로그아웃페이지
 
-        httpSecurity.formLogin(formLogin -> formLogin.loginPage("/custom/customLogin").loginProcessingUrl("/login").defaultSuccessUrl("/main")); // .loginProcessingUrl("/login")->이게없어러 로그인이 안되승ㅁ
-//        httpSecurity.logout(longout-> longout.)
-                     //커스텀로그인페이지
+        httpSecurity.formLogin(formLogin -> formLogin.loginPage("/custom/customLogin").loginProcessingUrl("/login").defaultSuccessUrl("/main")); // .loginProcessingUrl("/login")->이게없어러 로그인이 안됬음
+        httpSecurity.logout(longout-> longout.logoutSuccessUrl("/custom/customLogin"));
         return httpSecurity.build();
     }
 

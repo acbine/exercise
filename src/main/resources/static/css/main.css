@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d9edf7; /* 하늘색 계열 */
+
+    height: 100%;
+
+}
+
+.main-container {
+    width: 80%;
+    height: 880px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff; /* 흰색 */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+#logoutform {
+    position: absolute; /* 위치를 절대적으로 설정 */
+    top: 20px; /* 상단으로부터의 거리 */
+    right: 20px; /* 우측으로부터의 거리 */
+}
+
+
+
+.login-button {
+    text-align: center;
+    text-decoration: none; /* 밑줄 제거 */
+    background-color: #5bc0de; /* 하늘색 계열 */
+    color: white;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #cccccc; /* 연한 회색 */
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.recordbtn {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.modal {
+    display: none; /* 초기에는 숨겨진 상태 */
+    position: fixed; /* 페이지에 고정 */
+    z-index: 1; /* 다른 요소 위에 */
+    left: 0;
+    top: 0;
+    width: 100%; /* 전체 너비 */
+    height: 100%; /* 전체 높이 */
+    background-color: rgba(0,0,0,0.4); /* 반투명한 배경 */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 100px auto; /* 상단 여백과 가운데 정렬 */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* 모달 창 너비 */
+    height: 50%;
+}
